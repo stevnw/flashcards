@@ -18,6 +18,8 @@ Compile:
 
 ### Data set organisation
 
+See the Alt folder first, there are a few language options also from the same place I got the Polish dataset.
+
 Use a .tsv named "sentences.tsv"
 
 Needs to looks something like:
@@ -35,6 +37,4 @@ Needs to looks something like:
 Frequency doesn't really matter - it was just apart of the dataset I used from: http://frequencylists.blogspot.com/2016/08/5000-polish-sentences-sorted-from.html
 
 
-You will need to change the echo commands to better suit your language. 
-
-<pre> echo '{sentences[currentIndex].polish}' | /snap/bin/rhvoice.test -p alicja </pre>
+You will need to update the config.txt for any new language. Rhvoice is quite limited, so I would suggest Pico2wave as an alternative.
