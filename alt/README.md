@@ -18,4 +18,4 @@ i.e. if you want to use Russian voices;
 
 Get either the Anna or Irina voices and keep the engine as rhvoice
 
-Alternatively for languages that do not have voices on rhvoice, try espeak or possibly another one. You may need to mod the program further to allow for this. Personally I find espeak is quite horrid.
+Alternatively for languages that do not have voices on rhvoice, try pico2wave - or espeak (this one honestly sounds rubbish).
