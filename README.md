@@ -18,7 +18,7 @@ Compile:
 
 ### Data set organisation
 
-See the Alt folder first, there are a few language options also from the same place I got the Polish dataset.
+See the Alt folder first, there are a few language options also from the same place I got the Polish dataset. There is also a python script to turn other datasets from the same site into the correct form needed.
 
 Use a .tsv named "sentences.tsv"
 
