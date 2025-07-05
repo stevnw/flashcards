@@ -1,5 +1,5 @@
 # Flashcards
-A simple flashcard program written in Nim using nigui - using rhvoice calls
+A simple flashcard program written in Nim using nigui - using rhvoice for audio
 
 ![image](https://github.com/user-attachments/assets/d1740b91-444c-4731-9d20-8cf3712bb4db)
 
