@@ -8,9 +8,9 @@ To put them into the correct format, use the totsv.py script. I.e. If you want t
 
 This will then geneate {language}_sentences.tsv
 
-Simply rename this to sentences and it will work on with flashcards.nim.
+Simply rename this to sentences.tsv and it will work on with application.
 
-I have now added two things;
+I have also added two things;
 
 Engine and voice variables - both of which are in the config.txt
 
