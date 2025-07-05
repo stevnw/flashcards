@@ -104,6 +104,9 @@ label.onClick = proc(event: ClickEvent) =
     case engine:
     of "espeak":
       discard execCmd(fmt"espeak-ng -v {voice} '{sentences[currentIndex].polish}'")
+    of "pico":
+      let temp_wav = "/tmp/flashcard_temp.wav"
+      discard execCmd(fmt"pico2wave --lang {voice} --wave {temp_wav} '{sentences[currentIndex].polish}' && aplay -q {temp_wav} >/dev/null 2>&1 && rm {temp_wav}")
     else:
       discard execCmd(fmt"echo '{sentences[currentIndex].polish}' | /snap/bin/rhvoice.test -p " & voice)
 
@@ -127,6 +130,9 @@ if sentences.len > 0:
   case engine:
   of "espeak":
     discard execCmd(fmt"espeak-ng -v {voice} '{sentences[0].polish}'")
+  of "pico":
+    let temp_wav = "/tmp/flashcard_temp.wav"
+    discard execCmd(fmt"pico2wave --lang {voice} --wave {temp_wav} '{sentences[0].polish}' && aplay -q {temp_wav} >/dev/null 2>&1 && rm {temp_wav}")
   else:
     discard execCmd(fmt"echo '{sentences[0].polish}' | /snap/bin/rhvoice.test -p " & voice)
 
