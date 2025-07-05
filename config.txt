@@ -1,2 +1,2 @@
-voice=alicja
+voice=magda
 engine=rhvoice
