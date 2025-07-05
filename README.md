@@ -11,6 +11,11 @@ Reqs:
 
 https://rhvoice.org/
 
+Get one of the Polish voices, I think Magda is the best sounding one;
+
+<pre> sudo /snap/bin/rhvoice.vm -i magda </pre>
+
+
 Compile:
 
 <pre> nim c -r flashcards.nim </pre>
