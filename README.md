@@ -1,5 +1,5 @@
 # Flashcards
-A simple flashcard program written in Nim using nigui
+A simple flashcard program written in Nim using nigui <b>Note:</b> I have only tested this on Debian. I have no clue if it works on windows.
 
 ![image](https://github.com/user-attachments/assets/d1740b91-444c-4731-9d20-8cf3712bb4db)
 
