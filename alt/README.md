@@ -19,3 +19,21 @@ i.e. if you want to use Russian voices;
 Get either the Anna or Irina voices and keep the engine as rhvoice
 
 Alternatively for languages that do not have voices on rhvoice, try pico2wave - or espeak (this one honestly sounds rubbish).
+
+
+-----
+
+#### Pico2wave config example - i.e. Spanish
+
+<pre>
+  voice=es-ES
+  engine=pico
+</pre>
+
+
+#### eSpeak config example - i.e. Spanish
+
+<pre>
+  voice=es
+  engine=espeak
+</pre>
