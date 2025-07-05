@@ -5,6 +5,18 @@ import strformat
 
 app.init()
 
+var voice = "alicja"
+var engine = "rhvoice"
+try:
+  let config = readFile("config.txt")
+  for line in config.splitLines():
+    if line.startsWith("voice="):
+      voice = line.split('=')[1].strip()
+    if line.startsWith("engine="):
+      engine = line.split('=')[1].strip()
+except:
+  discard
+
 var sentences: seq[tuple[polish: string, english: string, frequency: string]] = @[]
 let lines = readFile("sentences.tsv").splitLines()
 for i, line in lines:
@@ -89,7 +101,11 @@ proc updateRange() =
 
 label.onClick = proc(event: ClickEvent) =
   if currentIndex >= 0 and currentIndex < sentences.len:
-    discard execCmd(fmt"echo '{sentences[currentIndex].polish}' | /snap/bin/rhvoice.test -p alicja") # This line needs to be changed to whatever your language is (provided rhvoice supports it)
+    case engine:
+    of "espeak":
+      discard execCmd(fmt"espeak-ng -v {voice} '{sentences[currentIndex].polish}'")
+    else:
+      discard execCmd(fmt"echo '{sentences[currentIndex].polish}' | /snap/bin/rhvoice.test -p " & voice)
 
 meaningButton.onClick = proc(event: ClickEvent) =
   if currentIndex >= 0 and currentIndex < sentences.len:
@@ -108,7 +124,11 @@ applyRangeButton.onClick = proc(event: ClickEvent) =
   updateRange()
 
 if sentences.len > 0:
-  discard execCmd(fmt"echo '{sentences[0].polish}' | /snap/bin/rhvoice.test -p alicja")
+  case engine:
+  of "espeak":
+    discard execCmd(fmt"espeak-ng -v {voice} '{sentences[0].polish}'")
+  else:
+    discard execCmd(fmt"echo '{sentences[0].polish}' | /snap/bin/rhvoice.test -p " & voice)
 
 window.show()
 app.run()
