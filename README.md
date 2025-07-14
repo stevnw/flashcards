@@ -1,5 +1,5 @@
 # flashcards-da
-Flashcards with major modifications to allow the use with the tatoeba data &amp; gtts genned audio instead of the tts engine stuff
+Flashcards with major modifications to allow the use with the tatoeba data &amp; gtts genned audio instead of the tts engine stuff (other version: https://github.com/stevnw/flashcards)
 
 <img width="510" height="184" alt="image" src="https://github.com/user-attachments/assets/f5335454-26a0-42ef-bf42-46dec3ef45bc" />
 
