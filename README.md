@@ -1,6 +1,6 @@
 # flashcards
-Simple flashcard application using Nigui
-
+ Simple Nim flashcards application for tatoeba datasets, using Nigui 
+ 
 <img width="510" height="184" alt="image" src="https://github.com/user-attachments/assets/f5335454-26a0-42ef-bf42-46dec3ef45bc" />
 
 
